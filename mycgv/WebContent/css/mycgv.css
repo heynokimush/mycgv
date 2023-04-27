@@ -1,6 +1,6 @@
-/**********************
+/***************************
 	Commons style sheet
-***********************/
+****************************/
 * {
 	padding:0px; margin:0px;
 	font-family:"³ª´®°íµñ";
@@ -11,12 +11,12 @@ section.login, section.join, section.mypage, section.notice, section.board, sect
 	margin:auto;
 }
 section.login form[name='loginForm'], section.join form[name='joinForm'],
-section.mypage > div, section.notice table, section.board table, section.admin > div {
+section.mypage > div, section.notice table, section.board table, 
+section.admin > div, section.admin table {
 	/* border:1px solid lightgray; */
 	border-radius:5px;
 	width:70%;
 	margin:auto;
-	padding:20px;
 }
 .title {
 	border-left:15px solid #333;
@@ -42,10 +42,21 @@ ul {
 	width:130px;
 	cursor:pointer;
 }
+.btn_style2 {
+	background:mediumseagreen;
+	color:white;
+	border-radius:5px;
+	border:1px solid #ddd;
+	font-size:10pt;
+	font-weight:700;
+	padding:7px 0;
+	width:80px;
+	cursor:pointer;
+}
 
-/**********************
+/***************************
 	Header style sheet
-***********************/
+****************************/
 header {
 	background:url("http://localhost:9000/mycgv/images/bg_header.gif");
 	height:149px;
@@ -105,9 +116,9 @@ header {
 	font-weight:700;
 }
 
-/**********************
+/********************************
 	Index-Content style sheet
-***********************/
+*********************************/
 .section1 {
 	background-image:url("http://localhost:9000/mycgv/images/carousel_bg.png")
 }
@@ -157,9 +168,9 @@ header {
 	/* outline: 3px double black; */
 }
 
-/**********************
+/***************************
 	Footer style sheet
-***********************/
+****************************/
 .footer_bg {
 	width:100%; height:183px;
 	background:#FFDB99;
@@ -207,9 +218,12 @@ header {
 }
 
 
-/**********************
+/***************************
 	Login Form style sheet
-***********************/
+****************************/
+section.login form {
+	height:300px;
+}
 section.login form ul {
 	list-style-type:none;
 	margin:0; padding:0;
@@ -261,11 +275,10 @@ section.login form ul li:last-child {
 }
 
 
-/**********************
+/***************************
 	Join Form style sheet
-***********************/
+****************************/
 section.join form ul {
-	border:1px solid blue;
 	font-size:10pt;
 }
 section.join form ul li {
@@ -298,4 +311,245 @@ input[name='email1'], input[name='email2'] {
 	border:1px solid lightgray;
 	border-radius:3px;
 	width:117px;
+}
+input[name='email2'] + select, select[name='phone2'] {
+	border:1px solid lightgray;
+	border-radius:3px;
+	padding:7px 10px;
+	font-size:9pt;
+	width:122px;
+}
+input[name='phone3'], input[name='phone4'], select[name='phone2'] {
+	border:1px solid lightgray;
+	padding:7px 4px;
+	border-radius:3px;
+	width:80px;
+	text-align:center;
+}
+textarea[name='intro'] {
+	border:1px solid lightgray;
+	padding:10px;
+	border-radius:3px;
+	width:58%;
+	height:100px;
+	margin-bottom:20px;
+	font-size:9pt;
+}
+input[type='radio'], input[type='radio'] +span, input[type='checkbox'], input[type='checkbox'] +span {
+	font-size:9pt;
+	margin:2px 0 0 5px;
+	padding:8px 4px;
+	vertical-align:middle;
+}
+form[name='joinForm'] ul li:last-child {
+	text-align:center;
+}
+form[name='joinForm'] ul li:last-child button:first-child {
+	margin-right:10px;
+}
+
+
+
+/***************************
+	MyPage style sheet
+****************************/
+section.mypage div {
+	text-align:center;
+	height:300px;
+}
+section.mypage article {
+	border:1px solid #ddd;
+	border-radius:3px;
+	width:200px;
+	padding:30px 0;
+	text-align:center;
+	font-size:12pt;
+	background:tomato;
+	color:white;
+	font-weight:700;
+	display:inline-block;
+	cursor:pointer;
+}
+section.mypage article:first-child {
+	background:mediumseagreen;
+	margin-right:10px;
+}
+
+
+/********************************
+	Notice, Board style sheet
+*********************************/
+section.notice table, section.notice th, section.notice td,
+section.board table, section.board th, section.board td,
+section.admin table, section.admin th, section.admin td {
+	border:1px solid #777;
+	border-collapse:collapse;
+	text-align:center;
+}
+section.notice th, section.notice td,
+section.board th, section.board td,
+section.admin th, section.admin td {
+	padding:5px 0;
+}
+section.notice tr > td:nth-child(2), 
+section.board tr > td:nth-child(2),
+section.admin table.admin_notice_content tr > td:nth-child(2) {
+	text-align:left;
+	text-indent:10px;
+}
+section.notice tr > td:nth-child(2) > a, 
+section.board tr > td:nth-child(2) > a {
+	text-decoration:none;
+	color:black;
+}
+section.notice tr > td:nth-child(2) > a:hover, 
+section.board tr > td:nth-child(2) > a:hover {
+	text-decoration:underline;
+}
+section.board tr:last-child td, 
+section.notice tr:last-child td,
+section.admin tr:last-child td,
+section.board tr:first-child td,
+section.admin table.admin_notice tr:first-child td {
+	border:1px solid white;
+	padding-top:20px;
+}
+
+section.notice tr:first-child, 
+section.board tr:nth-child(2),
+section.admin table.admin_member tr:first-child,
+section.admin table.admin_notice tr:nth-child(2) {
+	background:black;
+	color:white;
+}
+
+section.notice table.notice_content th,
+section.board table.board_content th,
+section.admin table.admin_notice_content th,
+section.admin table.board_content th {
+	background:black;
+	color:white;
+	width:140px;
+	padding:8px 0;
+}
+section.notice table.notice_content tr:first-child td,
+section.board table.board_content tr:nth-child(2) td {
+	background:white;
+	color:black;
+}
+section.notice table.notice_content tr:nth-child(2) td,
+section.board table.board_content tr:nth-child(2) td,
+section.admin table.admin_notice_content tr:nth-child(2) td {
+	padding:30px 0;
+}
+
+
+/***************************
+	Notice style sheet
+****************************/
+section.notice table.notice_content tr td:nth-child(2),
+section.admin table.admin_notice_content tr > td:nth-child(2) {
+	text-indent:0;
+	padding-left:10px;
+}
+
+
+
+/***************************
+	Board style sheet
+****************************/
+section.board tr:first-child td, 
+section.admin table.admin_notice tr:first-child td {
+	border-bottom:1px solid #777;
+	padding-top:0px;
+	text-align:right;
+}
+section.board table.board_content tr:first-child > td {
+	text-align:left;
+	padding-top:0px;
+	border:1px solid #777;
+}
+
+section.board form[name="writeForm"] table.board_content,
+section.board form[name="updateForm"] table.board_content,
+section.admin form[name="writeForm"] table.board_content,
+section.admin form[name="updateForm"] table.board_content {
+	width:60%;
+}
+section.board form[name="writeForm"] table.board_content tr td,
+section.board form[name="updateForm"] table.board_content tr td,
+section.admin form[name="writeForm"] table.board_content tr td,
+section.admin form[name="updateForm"] table.board_content tr td {
+	padding:10px;
+	padding-left:0px;
+	text-align:center;
+}
+section.board form[name="writeForm"] table.board_content tr:last-child td,
+section.board form[name="updateForm"] table.board_content tr:last-child td,
+section.admin form[name="writeForm"] table.board_content tr:last-child td,
+section.admin form[name="updateForm"] table.board_content tr:last-child td {
+	padding-left:10px;
+	padding-top:20px;
+}
+section.board form[name="writeForm"] table.board_content tr td input,
+section.board form[name="writeForm"] table.board_content tr td textarea,
+section.board form[name="updateForm"] table.board_content tr td input,
+section.board form[name="updateForm"] table.board_content tr td textarea,
+section.admin form[name="writeForm"] table.board_content tr td input,
+section.admin form[name="writeForm"] table.board_content tr td textarea,
+section.admin form[name="updateForm"] table.board_content tr td input,
+section.admin form[name="updateForm"] table.board_content tr td textarea {
+	padding:5px;
+	width:90%;
+	border:1px solid lightgray;
+	border-radius:3px;
+}
+section.board form[name="writeForm"] table button,
+section.board form[name="updateForm"] table button,
+section.board form[name="deleteForm"] table button,
+section.admin form[name="writeForm"] table button,
+section.admin form[name="updateForm"] table button,
+section.admin form[name="deleteForm"] table button {
+	width:80px;
+}
+
+section.board form[name="deleteForm"] table tr td,
+section.admin form[name="deleteForm"] table tr td {
+	text-align:center;
+	background:white;
+	color:black;
+	border:1px solid white;
+}
+section.board form[name="deleteForm"] table tr td img,
+section.admin form[name="deleteForm"] table tr td img {
+	width:200px;
+}
+
+
+/***************************
+	Admin style sheet
+****************************/
+section.admin > div {
+	text-align:center;
+	height:300px;
+	padding-top:30px;
+}
+section.admin article {
+	border:1px solid #ddd;
+	border-radius:3px;
+	width:200px;
+	padding:30px 0;
+	font-size:12pt;
+	background:tomato;
+	color:white;
+	font-weight:700;
+	display:inline-block;
+	margin-right:10px;
+}
+section.admin article:last-child {
+	margin-right:0px;
+}
+section.admin article a {
+	text-decoration:none;
+	color:white;
 }
