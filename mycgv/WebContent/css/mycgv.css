@@ -348,6 +348,10 @@ form[name='joinForm'] ul li:last-child button:first-child {
 	margin-right:10px;
 }
 
+#cmsg {
+	display:none;
+}
+
 
 
 /***************************
@@ -398,12 +402,14 @@ section.admin table.admin_notice_content tr > td:nth-child(2) {
 	text-indent:10px;
 }
 section.notice tr > td:nth-child(2) > a, 
-section.board tr > td:nth-child(2) > a {
+section.board tr > td:nth-child(2) > a,
+section.admin tr > td:nth-child(2) > a {
 	text-decoration:none;
 	color:black;
 }
 section.notice tr > td:nth-child(2) > a:hover, 
-section.board tr > td:nth-child(2) > a:hover {
+section.board tr > td:nth-child(2) > a:hover,
+section.admin tr > td:nth-child(2) > a:hover {
 	text-decoration:underline;
 }
 section.board tr:last-child td, 

@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <title>MYCGV</title>
 <link rel="stylesheet" href="http://localhost:9000/mycgv/css/mycgv.css">
+<script src="http://localhost:9000/mycgv/js/mycgv_javascript.js"></script>
 </head>
 <body>
 	<!-- header -->
@@ -24,7 +25,7 @@
 					<tr>
 						<th>제목</th>
 						<td>
-							<input type="text" name="btitle" placeholder="제목은 반드시 입력해주세요">
+							<input type="text" name="btitle" id="title" placeholder="제목은 반드시 입력해주세요">
 						</td>
 					</tr>
 					<tr>
@@ -41,7 +42,7 @@
 					</tr>
 					<tr>
 						<td colspan="2">
-							<button type="button" class="btn_style">등록완료</button>
+							<button type="button" class="btn_style" onclick="titleCheck()">등록완료</button>
 							<button type="reset" class="btn_style">다시쓰기</button>
 							<a href="board_list.html"><button type="button" class="btn_style">목록</button></a>
 							<a href="http://localhost:9000/mycgv/index.html"><button type="button" class="btn_style">홈</button></a>
